@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from '../shared/navbar/navbar.component';
+import { CaravanAdvertiesmentsComponent } from './caravan-advertiesments/caravan-advertiesments.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavbarComponent],
+  imports: [RouterOutlet,NavbarComponent,CaravanAdvertiesmentsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
