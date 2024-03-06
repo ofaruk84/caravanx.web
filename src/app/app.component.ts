@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CaravanAdvertiesmentsComponent } from './caravan-advertiesments/caravan-advertiesments.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import { CaravanAdvertiesmentsComponent } from './components/caravan-advertiesments/caravan-advertiesments.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 
 @Component({
