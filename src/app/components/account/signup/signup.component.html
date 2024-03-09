@@ -1,1 +1,38 @@
-<p>signup works!</p>
+<div class="container">
+    <div class="form-container">
+        <mat-card>
+            <div class="login-form">
+                <h2 class="text-center mb-4">Signup</h2>
+                <mat-radio-group class="mb-4" [value]="isIndividual ? 'individual' : 'company'" (change)="onUserTypeChange($event)">
+                    <mat-radio-button value="individual">Switch To Individual</mat-radio-button>
+                    <mat-radio-button value="company">Switch To Company</mat-radio-button>
+                </mat-radio-group>
+                <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                  <div class="content">
+                    <mat-form-field  appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input type="text" matInput formControlName="email" required>
+                      </mat-form-field>
+                    <mat-form-field  *ngIf="isIndividual" appearance="fill">
+                        <mat-label>Firstname</mat-label>
+                        <input type="text" matInput formControlName="firstname" required>
+                      </mat-form-field>
+                      <mat-form-field  *ngIf="isIndividual"  appearance="fill">
+                        <mat-label>Surname</mat-label>
+                        <input type="text" matInput formControlName="surname" required>
+                      </mat-form-field>
+                      <mat-form-field  *ngIf="!isIndividual"  appearance="fill">
+                        <mat-label>Company Name</mat-label>
+                        <input type="text" matInput formControlName="companyName" required>
+                      </mat-form-field>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput formControlName="password">
+                      </mat-form-field>
+                      <button mat-raised-button color="primary" type="submit">Signup</button>
+                  </div>  
+                </form>
+            </div>
+            </mat-card>
+    </div>
+</div>
