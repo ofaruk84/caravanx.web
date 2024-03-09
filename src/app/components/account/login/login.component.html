@@ -1,5 +1,11 @@
 <div class="container">
-    <div class="form-container">
+  <div class="row">
+    <div class="col-lg-6">
+      <!-- This div will contain your image -->
+      <img src="../../assets/yachtBanner.jpg" alt="Image" style="width: 100%; height: 500px; margin-top: 70px;">
+    </div>
+    <div class="col-lg-6 mt-4">
+      <div class="form-container">
         <mat-card>
             <div class="login-form">
                 <h2 class="text-center mb-4">Login</h2>
@@ -14,12 +20,17 @@
                         <input type="password" matInput formControlName="password">
                       </mat-form-field>
                       <button mat-raised-button color="primary" type="submit">Login</button>
-                  </div>  
+                  </div>
+                  <div class="mt-4">
+                    <a href="/signup">Signup for free</a>  
+                  </div>
                 </form>
             </div>
             </mat-card>
         
     </div>
+    </div>
+  </div>
 </div>
 
 
